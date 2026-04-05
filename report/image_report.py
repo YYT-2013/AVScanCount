@@ -77,13 +77,13 @@ def generate_png_report(
     draw.text((32, 32), title, fill=(255, 255, 255), font=title_font)
     _draw_vendor_icon(img, icon_path)
 
-    y = 160
-    line_height = 56
+    y = 145
+    line_height = 50
     for row in rows:
         draw.text((50, y), row, fill=(32, 45, 58), font=body_font)
         y += line_height
 
-    bar_left, bar_top, bar_right, bar_bottom = 50, 450, 910, 490
+    bar_left, bar_top, bar_right, bar_bottom = 50, 460, 910, 500
     draw.rectangle((bar_left, bar_top, bar_right, bar_bottom), fill=(218, 226, 235))
     if total > 0:
         removed_width = int((bar_right - bar_left) * (removed / total))
